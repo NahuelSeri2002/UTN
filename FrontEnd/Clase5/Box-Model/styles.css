@@ -1,0 +1,30 @@
+/* "*" selector universal*/
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*border box hace que toda la caja se adapte a las medidas de width y height que le das*/
+}
+
+/* el margin separa elementos de otros
+el padding agrega espacio entre en borde y el contenido de la caja (Relleno)*/
+.box{
+    margin: 20px 10px 5px 15px; 
+    padding: 20px;
+    border: 5px solid yellow;
+    border-radius: 10px;
+    border-bottom-color:blue;
+    border-top-color: blue;
+    border-left-style:groove;
+    border-right-style: groove;
+    border-bottom-style: dotted;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.box2{
+    margin: 20px 10px 5px 15px; /* sentido horario, funciona igual en el padding*/
+    padding: 20px;
+    border: 5px solid;/* tambien funciona en las propiedades de border*/
+    border-color: red yellow green blue;
+    width: 250px;
+}

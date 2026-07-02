@@ -1,0 +1,38 @@
+#principal{ /* "#" es para ID, solo afecta al id principal*/
+    color: #2b6bc0;
+}
+
+.titulo{ /* "." es para clase, solo afecta a la clase titulo*/
+    color: #4141fb;
+    font-family: monospace;
+    text-decoration: underline;
+}
+
+/* selector de etiqueca afecta a todos los p*/
+p{
+    color: #d5784d
+}
+
+/* como afectar a un elemento adyacente*/
+/* el ultimo elemento del selector es el afectado*/
+h3 + p{
+    font-style: italic;
+}
+/* afectar a un elemento adyacente de otro*/
+h3 + p, h3 + p + p{
+    font-style: italic;
+}
+/* afecta a todos los p que van despues del h3, sin importar cuantos sean*/
+h3 ~ p{
+    text-decoration: underline;
+}
+
+/* no importa el orden ni nada, !important hace que la propiedad se aplique de manera obligatoria
+SOLO USAR EN CASO DE QUERER RESOLVER CODIGO QUE NO SE PUEDE CONTROLAR, NO ES DE USO COTIDIANO*/
+.destacado-important{
+    color: red !important;
+}
+.destacado{
+    font-weight: 900;
+    color: #4141fb;
+}
