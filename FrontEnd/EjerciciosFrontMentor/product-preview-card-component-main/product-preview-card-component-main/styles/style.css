@@ -136,11 +136,11 @@ button:hover{
 
 @media (max-width: 375px) {
     
-    .deskstop-image{
+    .desktop-perfume{
         display: none;
     }
 
-    .mobile-image{
+    .mobile-perfume{
         display: block;
     }
 
