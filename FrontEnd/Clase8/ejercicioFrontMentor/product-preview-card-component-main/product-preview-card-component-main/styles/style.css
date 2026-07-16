@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.attribution { 
+    font-size: 0.6875rem; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+:root{
+    /*Fonts*/
+    --font-title: "Fraunces";
+    --font-text: "Montserrat";
+
+    /*Green*/
+    --green-500: hsl(158, 36%, 37%);
+    --green-700: hsl(158, 42%, 18%);
+
+    /*Neutral*/
+    --black: hsl(212, 21%, 14%);
+    --grey: hsl(228, 12%, 48%);
+    --cream: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
+}
+
+.mobile-perfume{
+    display: none;
+}
+
+body{
+    background-color: var(--cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  
+}
+
+article{
+    width: 650px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--white);
+}
+
+.cont-images, .cont-text{
+    width: 50%;
+}
+
+.cont-images img{
+    height: 100%;
+    width: 100%;
+}
+
+.cont-text{
+    padding: 35px;
+    padding-right: 50px;
+}
+
+.cont-text h3{
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight: 500;
+    font-family: var(--font-text);
+    color: var(--grey);
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.cont-text h2{
+    font-family: var(--font-title);
+    font-size: 38px;
+    margin-bottom: 25px;
+    line-height: 1;
+    
+}
+
+.cont-text .text{
+    font-size: 14px;
+    font-family: var(--font-text);
+    color: var(--grey);
+    margin-bottom: 25px;
+    line-height: 1.75;
+    font-weight: 500;
+}
+
+.cont-prices{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.cont-prices p{
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.sales-price{
+    font-size: 35px;
+    font-family: var(--font-title);
+    font-weight: bold;
+    color: var(--green-500);
+}
+
+.original-price{
+    font-family: var(--font-text);
+    color: var(--grey);
+    text-decoration: line-through;
+}
+
+button{
+    width: 100%;
+    background-color: var(--green-500);
+    padding: 20px;
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--font-text);
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--green-700);
+}
+
+@media (max-width: 375px) {
+    
+    .deskstop-image{
+        display: none;
+    }
+
+    .mobile-image{
+        display: block;
+    }
+
+    body{
+        padding: 30px;
+    }
+
+    article{
+        display: block;
+        width: 100%;
+        overflow: auto;
+    }
+
+    .cont-images, .cont-text{
+        width: 100%;
+    }
+}
+
+
