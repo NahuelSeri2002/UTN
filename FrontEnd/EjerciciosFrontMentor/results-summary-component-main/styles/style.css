@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.attribution { 
+    font-size: 0.6875rem; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+:root{
+    /* --- Font --- */
+    --font:"Hanken Grotesk";
+
+    /* --- Primary Colors --- */
+    --color-primary-light-red: hsl(0, 100%, 67%);
+    --color-primary-light-red-bg: hsl(0, 100%, 95%);
+    --color-primary-orangey-yellow: hsl(39, 100%, 56%);
+    --color-primary-orangey-yellow-bg: hsl(39, 100%, 95%);
+    --color-primary-green-teal: hsl(166, 100%, 37%);
+    --color-primary-green-teal-bg: hsl(166, 100%, 95%);
+    --color-primary-cobalt-blue: hsl(234, 85%, 45%);
+    --color-primary-cobalt-blue-bg: hwb(234 95% 0%);
+
+    /* --- Gradient Colors (Color Stops) --- */
+    --gradient-bg-start: hsl(252, 100%, 67%);
+    --gradient-bg-end: hsl(241, 81%, 54%);
+    --gradient-circle-start: hsla(256, 72%, 46%, 1);
+    --gradient-circle-end: hsla(241, 72%, 46%, 0);
+
+    /* --- Ready-to-use Gradients --- */
+    --gradient-background: linear-gradient(to bottom, var(--gradient-bg-start), var(--gradient-bg-end));
+    --gradient-circle: linear-gradient(to bottom, var(--gradient-circle-start), var(--gradient-circle-end));
+
+    /* --- Neutral Colors --- */
+    --color-neutral-white: hsl(0, 0%, 100%);
+    --color-neutral-pale-blue: hsl(221, 100%, 96%);
+    --color-neutral-light-lavender: hsl(241, 100%, 89%);
+    --color-neutral-dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+body{
+    background-color: var(--color-neutral-pale-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+article{
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    border-radius: 30px;
+    background-color: var(--color-neutral-white);
+}
+
+.content-firsthalfh{
+    padding: 42px;
+    background: var(--gradient-background);
+    height: 100%;
+    width: 50%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content-firsthalfh h3{
+    font-family: var(--font);
+    font-size: 20px;
+    color: var(--color-neutral-white);
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.content-firsthalfh .circle-numbers{
+    background: var(--gradient-circle);
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.circle-numbers .bignumber{
+    color: var(--color-neutral-white);
+    font-family: var(--font);
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.circle-numbers .smallnumber{
+    color: var(--color-neutral-white);
+    font-family: var(--font);
+    font-weight: 200;
+    font-size: 15px;
+}
+
+.content-firsthalfh h2{
+    color: var(--color-neutral-white);
+    font-family: var(--font);
+    font-size: 25px;
+    font-weight: 500;
+
+}
+
+.content-firsthalfh .text{
+    color: var(--color-neutral-white);
+    font-family: var(--font);
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.content-secondhalfh{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    padding: 40px;
+}
+
+.content-secondhalfh h3{
+    font-family: var(--font);
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.content-secondhalfh .boxes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.content-secondhalfh .box1{
+    background-color: var(--color-primary-light-red-bg);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.content-secondhalfh .box2{
+    background-color: var(--color-primary-orangey-yellow-bg);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.content-secondhalfh .box3{
+    background-color: var(--color-primary-green-teal-bg);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.content-secondhalfh .box4{
+    background-color: var(--color-primary-cobalt-blue-bg);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.box-title{
+    display: flex;
+    align-items: center;
+    gap: 10px;           
+}
+
+.numbers{
+    font-family: var(--font);
+    font-weight: bold;
+    color: var(--color-neutral-light-lavender);
+}
+ .black{
+    color: var(--color-neutral-dark-gray-blue);
+}
+
+.reaction{
+    color: var(--color-primary-light-red);
+    font-family: var(--font);
+    font-weight: bold;
+}
+
+.memory{
+    color: var(--color-primary-orangey-yellow);
+    font-family: var(--font);
+    font-weight: bold;
+}
+
+.verbal{
+    color: var(--color-primary-green-teal);
+    font-family: var(--font);
+    font-weight: bold;
+}
+
+.visual{
+    color: var(--color-primary-cobalt-blue);
+    font-family: var(--font);
+    font-weight: bold;
+}
+
+.content-secondhalfh button{
+    margin-top: 28px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--color-neutral-dark-gray-blue);
+    font-family: var(--font);
+    color: var(--color-neutral-white);
+    padding: 15px;
+    cursor: pointer;
+}
+.content-secondhalfh button:hover{
+    background: var(--gradient-background);
+}
+
+
+@media (max-width: 375px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        padding: 0; 
+        justify-content: flex-start; 
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+        background-color: var(--color-neutral-white);
+    }
+
+    .content-firsthalfh {
+        width: 100%;
+        border-radius: 0 0 30px 30px; 
+    }
+    
+    .content-secondhalfh {
+        width: 100%;
+    }
+
+}
