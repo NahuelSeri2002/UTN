@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --max-width: 1100px;
+
+    /* Colors*/
+    /* Fondos */
+    --bg-main: #0F172A;         /* Deep Indigo: Fondo general de la página */
+    --bg-card: #1E293B;         /* Night Slate: Tarjetas de playlists, modales, menús */
+    --bg-card-op: rgb(30, 41, 59, 0.7);
+    --bg-card-hover: #334155;   /* Estado hover para elementos interactivos */
+    --nav-foot:#1E293BD9;
+
+    /* Acentos de Color */
+    --accent-primary: #F43F5E;  /* Soft Coral: Botones principales, CTA, "Me gusta" */
+    --accent-primary-hover: #E11D48;
+    --accent-secondary: #10B981;
+    --accent-secondary-hover: #117c58;/* Muted Sage: Puntuaciones, estrellas, badges de género */
+
+    /* Tipografía y Texto */
+    --text-primary: #F8FAFC;    /* Soft Gray: Títulos, nombres de canciones, reseñas */
+    --text-muted: #64748B;      /* Muted Blue Gray: Fechas, duración, metadatos */
+    --text-on-accent: #FFFFFF;  /* Texto sobre botones de acento */
+
+    /* Bordes y Divisores */
+    --border-color: #334155;
+    --border-subtle: #1E293B;
+
+    /* Sombras */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.18);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+
+    /* Fonts */
+    --font-title: "Syne", sans-serif;
+    --font-body: "Plus Jakarta Sans", sans-serif;
+}
+
+body{
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-body);
+}
+
+h1,h2,h3{
+    font-family: var(--font-title);
+    font-weight: 800; 
+    letter-spacing: -0.02em;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+/* boton */
+
+.btn{
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 30px;
+    
+}
+
+.btn-primary{
+    background-color: var(--accent-primary);
+    font-family: var(--font-title);
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover{
+    background-color: var(--accent-primary-hover);
+    transform: translateY(-2px);
+    transform: scale(1.05);
+    color: var(--text-on-accent);
+}
+
+/* Header y NAV*/
+
+header{
+    background-color: var(--nav-foot);
+    padding: 1.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 2px solid var(--accent-primary);
+    border-radius: 0 0 10px 10px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo{
+    font-family: var(--font-title);
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.logo svg{
+    margin-right: 0.4rem;
+    color: var(--accent-primary);
+    transition: all 0.2s;
+    
+}
+
+.logo:hover svg{
+    animation: headBeat 0.5s ease infinite alternate;
+}
+
+@keyframes headBeat {
+  0% {
+    transform: scale(1.1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.15) rotate(-8deg);
+  }
+  75% {
+    transform: scale(1.15) rotate(8deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(0deg);
+  }
+}
+
+.nav-links{
+    display: flex;
+    gap: 1.8rem;
+}
+
+.nav-links a{
+    color: var(--text-primary);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.nav-links a:hover{
+    color: var(--accent-primary-hover);
+}
+
+/* Footer */
+
+footer{
+    background-color: var(--nav-foot);
+    color: var(--text-primary);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: auto;
+    border-top: 2px solid var(--accent-primary);
+    border-radius: 10px 10px 0 0;
+}
+
+.footer-nav{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.footer-nav a, .footer-social a{
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover{
+    color: var(--accent-primary-hover);
+}
+
+.footer-social{
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.instagram{
+    color: var(--accent-primary);
+    transition: color 0.2;
+}
+
+.instagram:hover{
+    color: var(--accent-primary-hover);
+}
+
+.spotify{
+    color: var(--accent-secondary);
+    transition: color 0.2;
+}
+
+.spotify:hover{
+    color: var(--accent-secondary-hover);
+}
+
+
+/*Responsive*/
+
+@media (max-width: 768px) {
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
