@@ -29,6 +29,7 @@
 
     /* Bordes y Divisores */
     --border-color: #334155;
+    --border-line: #4e6483;
     --border-subtle: #1E293B;
 
     /* Sombras */
@@ -87,7 +88,79 @@ ul{
     transition: all 0.2s ease;
 }
 
+.btn-form{
+    width: 200px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
 .btn-primary:hover{
+    background-color: var(--accent-primary-hover);
+    transform: translateY(-2px);
+    transform: scale(1.05);
+    color: var(--text-on-accent);
+}
+
+/*Form*/
+.default-form{
+    padding: 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-card);
+    width: 100%;
+    max-width: 500px;
+    border-radius: 30px;
+    border: 2px solid var(--accent-primary);
+    gap: 1.5rem;
+}
+
+.default-form .p{
+     font-size: 1rem;
+     font-weight: bold;
+}
+
+.default-form input{
+    margin-top: 0.5rem;
+    height: 2.5rem;
+    width: 25rem;
+    border: none;
+    border: 1px solid var(--border-line);
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: var(--border-color);
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.default-form select{
+    margin-top: 0.5rem;
+    height: 2.5rem;
+    width: 25rem;
+    border: none;
+    border: 1px solid var(--border-line);
+    border-radius: 8px;
+    padding-left: 1rem;
+    background-color: var(--border-color);
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.enviar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.envio{
+    background-color: var(--accent-primary);
+}
+ 
+.envio:hover{
     background-color: var(--accent-primary-hover);
     transform: translateY(-2px);
     transform: scale(1.05);
@@ -222,6 +295,12 @@ footer{
 
 .spotify:hover{
     color: var(--accent-secondary-hover);
+}
+
+footer p{
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
 }
 
 

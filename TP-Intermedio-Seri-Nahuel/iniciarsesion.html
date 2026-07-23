@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MusicBoxed - Contacto</title>
+        <title>MusicBoxed - Registrarse</title>
         <link rel="stylesheet" href="./css/styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,22 +18,51 @@
                     <li><a href="./index.html">Inicio</a></li>
                     <li><a href="./puntuacion.html">Puntuacion</a></li>
                     <li><a href="./galeria.html">Galeria</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./iniciarsesion.html">Iniciar Sesion</a></li>
+                    <li><a href="./registrarse.html">Registrarse</a></li>
                 </ul>
             </nav>
         </header>
+
+            <main>
+                <h2>Iniciar Sesion</h2>
+                <section class="inicio-sesion">
+                    <form action="./index.html" class="default-form">
+                        <div>
+                            <p>Correo electronico</p>  
+                            <input type="email" placeholder="tunombre@gmail.com" required> 
+                        </div>
+                        <div>
+                            <p>Contraseña</p>
+                            <input type="password" placeholder="contraseña" required>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" class="checkbox">
+                                <span>Recordar usuario</span>
+                            </label>
+                        </div>
+                        <div class="enviar">
+                        <button type="submit" class="envio btn  btn-form">Iniciar Sesion</button>
+                        <button type="reset" class="resetear btn btn-form">Limpiar Formulario</button>
+                    </div>
+                    </form>
+                </section>
+            </main>
 
          <footer>
             <ul class="footer-nav">
                 <li><a href="./index.html">Inicio</a></li>
                 <li><a href="./puntuacion.html">Puntuacion</a></li>
                 <li><a href="./galeria.html">Galeria</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="./iniciarsesion.html">Iniciar Sesion</a></li>
+                <li><a href="./registrarse.html">Registrarse</a></li>
             </ul>
             <div class="footer-social">
                 <a href="#" aria-label="Instagram" class="instagram"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#" aria-label="Spotify" class="spotify"><i class="fa-brands fa-spotify"></i></a>
             </div>
+            <p>© 2026 MusicBoxed. Todos los derechos reservados</p>
         </footer>
     </body>
 </html>
