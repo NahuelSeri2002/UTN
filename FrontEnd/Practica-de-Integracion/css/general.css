@@ -1,0 +1,145 @@
+/*reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Variables*/
+:root{
+
+    --max-width: 1100px;
+    
+    /*Colors*/
+    --color-primary: #6f4e37;
+    --color-dark: #2C1810;
+    --color-accent: #d4a574;
+    --color-bg: #faf6f1;
+    --color-text: #3a2e28;
+    --color-white: #ffffff;
+
+    /*Fonts*/
+    --font-heading: "Fraunces", serif;
+    --font-body: "Poppins", sans-serif;
+}
+
+body{
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-body);
+}
+
+h1,h2,h3{
+    font-family: var(--font-heading);
+}
+
+img{
+    /*que las imagenes no rompan el layout*/
+    max-width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+/*Header y NAV*/
+
+header{
+    background-color: var(--color-dark);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo{
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.logo i{
+    color: var(--color-accent);
+    margin-right: 0.4rem;
+}
+
+.nav-links{
+    display: flex;
+    gap: 1.8rem;
+}
+
+.nav-links a{
+    color: var(--color-white);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.nav-links a:hover, .footer-nav a:hover, .footer-social a:hover{
+    color: var(--color-accent);
+}
+
+/*Footer*/
+
+footer{
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: auto;
+}
+
+.footer-nav{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.footer-nav a, .footer-social a{
+    transition: color 0.2s;
+}
+
+.footer-social{
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/*Responsive*/
+
+@media (max-width: 768px) {
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+    }
+}
